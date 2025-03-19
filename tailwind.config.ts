@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss"
+import animate from "tailwindcss-animate"
+import type { PluginAPI } from "tailwindcss/types/config"
 
 const config = {
   darkMode: ["class"],
@@ -123,8 +125,8 @@ const config = {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
-    ({ addUtilities }) => {
+    animate,
+    ({ addUtilities }: PluginAPI) => {
       const newUtilities = {
         ".text-shadow-neon": {
           textShadow: "0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px currentColor",
