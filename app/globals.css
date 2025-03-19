@@ -2,20 +2,200 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91.2% 59.8%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at center, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.8) 100%),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative overflow-hidden transition-all duration-300 hover:text-shadow-neon;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link-inicio {
+    @apply hover:text-neon-orange;
+  }
+
+  .nav-link-inicio::after {
+    @apply bg-neon-orange;
+  }
+
+  .nav-link-servicios {
+    @apply hover:text-neon-blue;
+  }
+
+  .nav-link-servicios::after {
+    @apply bg-neon-blue;
+  }
+
+  .nav-link-portafolio {
+    @apply hover:text-neon-purple;
+  }
+
+  .nav-link-portafolio::after {
+    @apply bg-neon-purple;
+  }
+
+  .nav-link-acerca {
+    @apply hover:text-neon-pink;
+  }
+
+  .nav-link-acerca::after {
+    @apply bg-neon-pink;
+  }
+
+  .nav-link-blog {
+    @apply hover:text-neon-yellow;
+  }
+
+  .nav-link-blog::after {
+    @apply bg-neon-yellow;
+  }
+
+  .nav-link-contacto {
+    @apply hover:text-neon-green;
+  }
+
+  .nav-link-contacto::after {
+    @apply bg-neon-green;
+  }
+
+  .futuristic-card {
+    @apply relative overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-sm transition-all duration-300;
+  }
+
+  .futuristic-card::before {
+    content: "";
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 transition-opacity duration-500;
+  }
+
+  .futuristic-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .futuristic-card:hover {
+    @apply border-white/20 shadow-lg;
+  }
+
+  .glow-effect {
+    @apply relative;
+  }
+
+  .glow-effect::after {
+    content: "";
+    @apply absolute;
+    @apply -inset-[1px];
+    @apply rounded-[inherit];
+    @apply opacity-0;
+    @apply transition;
+    @apply duration-300;
+    @apply z-[-1];
+    background: linear-gradient(
+      45deg,
+      rgba(255, 123, 0, 0.5),
+      rgba(0, 179, 255, 0.5),
+      rgba(179, 0, 255, 0.5),
+      rgba(0, 255, 157, 0.5)
+    );
+    filter: blur(8px);
+  }
+
+  .glow-effect:hover::after {
+    @apply opacity-100;
+  }
+
+  .grid-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer components {
+  .neon-text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-purple to-neon-orange text-shadow-neon;
+  }
+}
+
+@layer components {
+  .neon-glow-multicolor {
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(0, 179, 255, 0.8),
+      0 0 15px rgba(0, 179, 255, 0.6),
+      0 0 20px rgba(179, 0, 255, 0.4),
+      0 0 35px rgba(255, 123, 0, 0.2);
+  }
+}
+
+@keyframes pulse-neon-intense {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(0, 179, 255, 0.8),
+      0 0 15px rgba(0, 179, 255, 0.6);
+  }
+  50% {
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(0, 179, 255, 0.8),
+      0 0 30px rgba(179, 0, 255, 0.8),
+      0 0 40px rgba(255, 123, 0, 0.6);
+  }
+}
+
+@layer utilities {
+  .animate-pulse-neon-intense {
+    animation: pulse-neon-intense 2s infinite;
+  }
 }
