@@ -135,7 +135,7 @@ export default function Home() {
             <Link href="/" className="nav-link nav-link-inicio text-sm font-medium">
               Inicio
             </Link>
-            <Link href="#Nuestros Servicios" className="nav-link nav-link-servicios text-sm font-medium">
+            <Link href="#servicios" className="nav-link nav-link-servicios text-sm font-medium">
               Servicios
             </Link>
             <Link href="/portafolio" className="nav-link nav-link-portafolio text-sm font-medium">
@@ -184,7 +184,7 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 grid-bg relative overflow-hidden">
+        <section id="servicios" className="w-full py-12 md:py-24 lg:py-32 grid-bg relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-neon-blue/10 to-neon-purple/10 z-0"></div>
           <div className="container px-4 md:px-6 relative z-10">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
