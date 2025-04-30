@@ -135,20 +135,17 @@ export default function Home() {
             <Link href="/" className="nav-link nav-link-inicio text-sm font-medium">
               Inicio
             </Link>
-            <Link href="/servicios" className="nav-link nav-link-servicios text-sm font-medium">
+            <Link href="#Nuestros Servicios" className="nav-link nav-link-servicios text-sm font-medium">
               Servicios
             </Link>
             <Link href="/portafolio" className="nav-link nav-link-portafolio text-sm font-medium">
               Portafolio
             </Link>
-            <Link href="/acerca" className="nav-link nav-link-acerca text-sm font-medium">
-              Acerca de
+            <Link href="/contacto" className="nav-link nav-link-contacto text-sm font-medium">
+              Contacto
             </Link>
             <Link href="/blog" className="nav-link nav-link-blog text-sm font-medium">
               Blog
-            </Link>
-            <Link href="/contacto" className="nav-link nav-link-contacto text-sm font-medium">
-              Contacto
             </Link>
           </nav>
           <div className="flex items-center gap-4">
