@@ -132,19 +132,19 @@ export default function Home() {
             </Link>
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link href="/" className="nav-link nav-link-inicio text-sm font-medium">
+            <Link href="#inicio" className="nav-link nav-link-inicio text-sm font-medium">
               Inicio
             </Link>
             <Link href="#servicios" className="nav-link nav-link-servicios text-sm font-medium">
               Servicios
             </Link>
-            <Link href="/portafolio" className="nav-link nav-link-portafolio text-sm font-medium">
+            <Link href="#portafolio" className="nav-link nav-link-portafolio text-sm font-medium">
               Portafolio
             </Link>
-            <Link href="/contacto" className="nav-link nav-link-contacto text-sm font-medium">
+            <Link href="#contacto" className="nav-link nav-link-contacto text-sm font-medium">
               Contacto
             </Link>
-            <Link href="/blog" className="nav-link nav-link-blog text-sm font-medium">
+            <Link href="#blog" className="nav-link nav-link-blog text-sm font-medium">
               Blog
             </Link>
           </nav>
@@ -153,7 +153,7 @@ export default function Home() {
               asChild
               className="hidden md:flex glow-effect bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-blue transition-all duration-500"
             >
-              <Link href="/contacto">Solicitar Presupuesto</Link>
+              <Link href="#contacto">Solicitar Presupuesto</Link>
             </Button>
             <Button
               variant="outline"
@@ -184,7 +184,7 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section id="servicios" className="w-full py-12 md:py-24 lg:py-32 grid-bg relative overflow-hidden">
+        <section id="inicio" className="w-full py-12 md:py-24 lg:py-32 grid-bg relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-neon-blue/10 to-neon-purple/10 z-0"></div>
           <div className="container px-4 md:px-6 relative z-10">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
@@ -202,7 +202,7 @@ export default function Home() {
                     size="lg"
                     className="glow-effect bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-blue transition-all duration-500"
                   >
-                    <Link href="/contacto">Solicitar Presupuesto</Link>
+                    <Link href="#contacto">Solicitar Presupuesto</Link>
                   </Button>
                   <Button
                     variant="outline"
@@ -210,7 +210,7 @@ export default function Home() {
                     asChild
                     className="border-white/20 hover:border-white/40 transition-colors"
                   >
-                    <Link href="/servicios">Nuestros Servicios</Link>
+                    <Link href="#servicios">Nuestros Servicios</Link>
                   </Button>
                 </div>
               </div>
@@ -232,7 +232,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+        <section id="servicios" className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-neon-purple/10 to-transparent z-0"></div>
           <div className="container px-4 md:px-6 relative z-10">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -437,7 +437,7 @@ export default function Home() {
         </section>
 
         {/* Portfolio Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden grid-bg">
+        <section id="portafolio" className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden grid-bg">
           <div className="absolute inset-0 bg-gradient-to-b from-neon-purple/10 to-neon-blue/10 z-0"></div>
           <div className="container px-4 md:px-6 relative z-10">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -490,14 +490,14 @@ export default function Home() {
                 asChild
                 className="glow-effect bg-gradient-to-r from-neon-purple to-neon-blue hover:from-neon-blue hover:to-neon-purple transition-all duration-500"
               >
-                <Link href="/portafolio">Ver todos los proyectos</Link>
+                <Link href="#portafolio">Ver todos los proyectos</Link>
               </Button>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+        <section id="contacto" className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-neon-blue/10 to-transparent z-0"></div>
           <div className="container px-4 md:px-6 relative z-10">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
@@ -559,7 +559,7 @@ export default function Home() {
         </section>
 
         {/* Blog Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden grid-bg">
+        <section id="blog" className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden grid-bg">
           <div className="absolute inset-0 bg-gradient-to-b from-neon-blue/10 to-neon-yellow/10 z-0"></div>
           <div className="container px-4 md:px-6 relative z-10">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -634,7 +634,7 @@ export default function Home() {
                 asChild
                 className="glow-effect bg-gradient-to-r from-neon-yellow to-neon-orange hover:from-neon-orange hover:to-neon-yellow transition-all duration-500"
               >
-                <Link href="/blog">Ver todos los artículos</Link>
+                <Link href="#blog">Ver todos los artículos</Link>
               </Button>
             </div>
           </div>
@@ -652,7 +652,7 @@ export default function Home() {
               </p>
               <div className="flex gap-4">
                 <Link
-                  href="#"
+                  href="https://web.facebook.com/profile.php?id=61575881877511"
                   className="text-muted-foreground hover:text-neon-blue hover:text-shadow-neon transition-colors"
                 >
                   <Facebook className="h-5 w-5" />

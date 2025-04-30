@@ -199,3 +199,7 @@
     animation: pulse-neon-intense 2s infinite;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
