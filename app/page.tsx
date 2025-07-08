@@ -126,9 +126,8 @@ export default function Home() {
               <Image
                 src="/blanco.png"
                 alt="Logo"
-                width={0}
-                height={0}
-                className="rounded-full"
+                width={40}
+                height={40}
               />
               <span className="text-2xl font-bold text-white transition-all duration-500 
                 group-hover:text-transparent group-hover:bg-clip-text 
