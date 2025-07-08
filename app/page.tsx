@@ -123,6 +123,13 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center space-x-2 group">
+              <Image
+                src="/blanco.png"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
               <span className="text-2xl font-bold text-white transition-all duration-500 
                 group-hover:text-transparent group-hover:bg-clip-text 
                 group-hover:bg-gradient-to-r group-hover:from-neon-blue group-hover:via-neon-purple group-hover:to-neon-orange 
