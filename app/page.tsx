@@ -28,6 +28,16 @@ import {
 
 export default function Home() {
   const [expandedArticles, setExpandedArticles] = useState<number[]>([])
+  // Nuevo estado para la pestaña activa
+  const [activeTab, setActiveTab] = useState("web")
+
+  // Mapeo de imágenes por pestaña
+  const tabImages: Record<string, { src: string; alt: string }> = {
+    web: { src: "/images/sam.jpg", alt: "Diseño Web" },
+    software: { src: "/images/software.jpg", alt: "Desarrollo de Software" },
+    design: { src: "/images/design.jpg", alt: "Diseño Gráfico" },
+    marketing: { src: "/images/marketing.jpg", alt: "Marketing Digital" },
+  }
 
   const toggleArticle = (id: number) => {
     setExpandedArticles((prev) => (prev.includes(id) ? prev.filter((articleId) => articleId !== id) : [...prev, id]))
@@ -252,7 +262,12 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <Tabs defaultValue="web" className="w-full">
+              <Tabs
+                defaultValue="web"
+                className="w-full"
+                onValueChange={setActiveTab}
+                value={activeTab}
+              >
                 <TabsList className="grid w-full grid-cols-4 bg-black/50 border border-white/10">
                   <TabsTrigger
                     value="web"
@@ -428,13 +443,14 @@ export default function Home() {
                   </Button>
                 </TabsContent>
               </Tabs>
+              {/* Imagen dinámica a la derecha de las pestañas */}
               <div className="relative">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-neon-purple to-neon-blue rounded-xl blur-lg opacity-75 animate-pulse-neon"></div>
                 <Image
-                  src="/images/sam.jpg"
+                  src={tabImages[activeTab].src}
                   width={550}
                   height={550}
-                  alt="Servicios Digitales"
+                  alt={tabImages[activeTab].alt}
                   className="relative rounded-xl object-cover z-10 animate-scale-slow"
                 />
               </div>
